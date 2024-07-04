@@ -6,12 +6,17 @@ icon: 'code'
 
 ## 管理台设置
 
-### Inline Code
+您可以在控制台的「我的訂單」裡查看和修改當前的地區和周期配置。修改成功後，變更將在一分鐘內生效。
 
-To denote a `word` or `phrase` as code, enclose it in backticks (`).
+## 编码设置
+以使用美國紐約地區的IP，並將IP更換周期設置為1分鐘為例。
+<br />您可以在程式中通過以下方式進行設置：
+`{username}-region-{US}-area-{New York}-period-{1}:{password}`， 將用戶名、國家編碼、地區編碼、IP更換周期(分鐘)、密碼填入後base64編碼生成Proxy-Authorization。例如用戶名`gf2814951572`，密碼`aft415oyt`，這次請求使用`美国-纽约地区ip、换ip周期1分钟`。以Python為例，用以下程式碼生成base64驗證字串：
 
 ```
-To denote a `word` or `phrase` as code, enclose it in backticks (`).
+import base64
+print base64.b64encode('gf2814951572-region-US-area-New York-period-1:aft415oyt')
+
 ```
 
 ### Code Block
