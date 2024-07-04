@@ -1,0 +1,18 @@
+---
+title: '周期版使用多通道'
+description: '動態住宅代理周期版使用多通道的設置介紹'
+icon: 'code'
+---
+
+對於需要周期更換IP的動態住宅代理，支持多通道使用，在同一換IP周期內每個通道會轉發一個獨立的代理IP。
+
+- 以本次請求使用`美國-紐約地區ip、換ip周期1分鐘`為例，設置參數sid，每個sid對應一個通道，sid為長度不超過6位的隨機字符串。
+
+```python 程式碼範例
+gf2814951572-region-US-area-New York-period-1-sid-ss01:aft415oyt  # 通道一
+gf2814951572-region-US-area-New York-period-1-sid-ss02:aft415oyt  # 通道二
+gf2814951572-region-US-area-New York-period-1-sid-ss03:aft415oyt  # 通道三
+```
+
+<Warning>只支持通过用户名设置通道</Warning>
+
