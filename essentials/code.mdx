@@ -4,21 +4,28 @@ description: '動態住宅代理IP地區及IP更換周期的設置'
 icon: 'code'
 ---
 
-## 管理台设置
+## console settings
+**管理台设置**
 
-您可以在控制台的「我的訂單」裡查看和修改當前的地區和周期配置。修改成功後，變更將在一分鐘內生效。
+您可以在控制台的 [我的訂單](http://www.go2proxy.com/console/orders) 裡查看和修改當前的地區和周期配置。修改成功後，變更將在一分鐘內生效。
 
-## 编码设置
+## encoding settings
+**编码设置**
+
 以使用美國紐約地區的IP，並將IP更換周期設置為1分鐘為例。
 <br />您可以在程式中通過以下方式進行設置：
-`{username}-region-{US}-area-{New York}-period-{1}:{password}`， 將用戶名、國家編碼、地區編碼、IP更換周期(分鐘)、密碼填入後base64編碼生成Proxy-Authorization。例如用戶名`gf2814951572`，密碼`aft415oyt`，這次請求使用`美国-纽约地区ip、换ip周期1分钟`。以Python為例，用以下程式碼生成base64驗證字串：
+`{username}-region-{US}-area-{New York}-period-{1}:{password}`， 將用戶名、國家編碼、地區編碼、IP更換周期(分鐘)、密碼填入後base64編碼生成Proxy-Authorization。例如用戶名`gf2814951572`，密碼`aft415oyt`，這次請求使用`美國-紐約地區ip、IP更換周期1分鐘`。以Python為例，用以下程式碼生成base64驗證字串：
 
-```
+```python
 import base64
 print base64.b64encode('gf2814951572-region-US-area-New York-period-1:aft415oyt')
 
+另外您也可以配置多個使用者名稱和密碼，並指定不同的地區和週期，根據業務需求靈活運用。
+base64.b64encode('gf2814951572-region-JP-area-Tokyo-period-0:aft415oyt') # 日本東京地區、每次請求更換ip
+base64.b64encode('gf2814951572-region-GB-period-1:aft415oyt') # 英國地區、1分鐘更換ip
 ```
 
+當您通過編碼方式設置地區和周期時，系統會忽略您在控制台「我的訂單」裡的地區和周期配置。
 ### Code Block
 
 Use [fenced code blocks](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks) by enclosing code in three backticks and follow the leading ticks with the programming language of your snippet to get syntax highlighting. Optionally, you can also write the name of your code after the programming language.
