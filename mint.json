@@ -43,13 +43,9 @@
     {
       "group": "開發指南",
       "pages": [
-        "essentials/markdown",
         "essentials/code",
         "essentials/code2",
-        "essentials/code3",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "essentials/test"
       ]
     },
     {

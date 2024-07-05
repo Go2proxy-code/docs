@@ -23,12 +23,13 @@ curl -v "https://www.google.com/" -x username:password@0hmg5j581x.g.go2proxy.com
 
 #直接添加Proxy-Authorization
 curl -v -H "Proxy-Authorization: Basic bXl1c2VybmFtZTpteXBhc3N3b3Jk" "https://www.google.com/" -x 0hmg5j581x.g.go2proxy.com:16888
-
 ```
 
 ```python SOCKS代理
 #帶上用戶名密碼
 curl -v "https://www.google.com/" --socks5 username:password@0hmg5j581x.g.go2proxy.com:16888
 ```
-<Warning>訪問https網站請**設置IP白名單**</Warning>
 
+</CodeGroup>
+
+<Info>訪問https網站請**設置IP白名單**</Info>
