@@ -14,6 +14,9 @@
       "to": "#15CEEA"
     }
   },
+  "seo": {
+  "indexHiddenPages": true
+},
   "topbarLinks": [
     {
       "name": "控制台",
