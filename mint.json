@@ -35,8 +35,7 @@
       "group": "快速開始",
       "pages": [
         "essentials/dynamic",
-        "essentials/static",
-        "essentials/abc"
+        "essentials/static"
       ]
     },
     {
