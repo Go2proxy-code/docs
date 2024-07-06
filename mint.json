@@ -21,7 +21,7 @@
     }
   ],
   "topbarCtaButton": {
-    "name": "註冊",
+    "name": "免費註冊",
     "url": "http://www.go2proxy.com/register"
   },
   "tabs": [
@@ -35,7 +35,8 @@
       "group": "快速開始",
       "pages": [
         "essentials/dynamic",
-        "essentials/static"
+        "essentials/static",
+        "essentials/star"
       ]
     },
     {
