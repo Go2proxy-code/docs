@@ -34,8 +34,8 @@
     {
       "group": "快速開始",
       "pages": [
-        "introduction",
-        "quickstart",
+        "essentials/dynamic",
+        "essentials/static",
         "essentials/abc"
       ]
     },
