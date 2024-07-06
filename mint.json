@@ -43,7 +43,8 @@
       "pages": [
         "essentials/code",
         "essentials/code2",
-        "essentials/test"
+        "essentials/test",
+        "essentials/errcode"
       ]
     },
     {
