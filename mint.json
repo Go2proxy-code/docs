@@ -14,9 +14,6 @@
       "to": "#15CEEA"
     }
   },
-  "seo": {
-  "indexHiddenPages": true
-},
   "topbarLinks": [
     {
       "name": "控制台",
@@ -45,11 +42,11 @@
     {
       "group": "開發指南",
       "pages": [
-        "essentials/code",
-        "essentials/code2",
-        "essentials/test",
-        "essentials/errcode",
-        "essentials/areacode"
+        "dev/ip",
+        "dev/session",
+        "dev/test",
+        "dev/errcode",
+        "dev/areacode"
       ]
     },
     {

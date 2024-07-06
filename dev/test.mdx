@@ -1,0 +1,35 @@
+---
+title: '測試代理可用性'
+description: '支持白名單和用戶名密碼兩種驗證方式，建議您先在本機測試，測試OK後就可以正常使用了。'
+icon: 'code'
+---
+
+## 1.代理驗證
+- 將您機器的IP作為白名單
+- 發起請求時設置用戶名和密碼（根據所使用的請求庫設置，用於代理驗證的用戶名密碼在訂單詳情頁獲取）
+
+## 2.命令列測試
+如果您的程式在Linux上運行，我們非常推薦您在命令列下先通過`curl`命令測試代理服務器的可用性，然後再進行編程。
+
+> 例如您的用戶名是`username`，密碼是`password`，代理Host和端口是`0hmg5j581x.g.go2proxy.com:16888`
+
+可執行如下命令測試代理可用性：
+
+<CodeGroup>
+
+```python HTTP代理
+#帶上用戶名密碼
+curl -v "https://www.google.com/" -x username:password@0hmg5j581x.g.go2proxy.com:16888
+
+#直接添加Proxy-Authorization
+curl -v -H "Proxy-Authorization: Basic bXl1c2VybmFtZTpteXBhc3N3b3Jk" "https://www.google.com/" -x 0hmg5j581x.g.go2proxy.com:16888
+```
+
+```python SOCKS代理
+#帶上用戶名密碼
+curl -v "https://www.google.com/" --socks5 username:password@0hmg5j581x.g.go2proxy.com:16888
+```
+
+</CodeGroup>
+
+<Warning>訪問https網站請**設置IP白名單**</Warning>
