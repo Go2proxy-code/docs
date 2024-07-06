@@ -1,9 +1,20 @@
 ---
-title: 'New file'
+title: '動態住宅代理錯誤碼'
 description: 'Description of your new file.'
 ---
 
-| Text Size   | How to write it          | Result                 |
-| ----------- | ------------------------ | ---------------------- |
-| Superscript | `<sup>superscript</sup>` | <sup>superscript</sup> |
-| Subscript   | `<sub>subscript</sub>`   | <sub>subscript</sub>   |
+| HTTP返回碼   | Response body 內容| 說明    |
+| ----------- | -----------------| ---------|
+|`407`|情況一:Proxy Authentication Failed:%auth<br />情況二:White IP Failed:$client_ip| 用戶名密碼驗證失敗|
+|`440`|Bandwidth Over Limit|帶寬超限|
+|`441`|Request Rate Over Limit|HTTP請求/TCP連接超頻|
+|`442`|Authentication Type Error|認證方式檢測失敗|
+|`446`|Host DNS Failed|DNS解析錯誤|
+|`447`|Real-name Authentication Required|需要實名認證|
+|`451`|Miss Host|代理請求格式不正確|
+|`452`|Public Host Required|目標位址不是公網IP|
+|`453`|Proxy Port Error|使用了錯誤的端口號|
+|`456`|CN Client Forbidden|中國大陸客戶端禁止|
+|`459`|Insufficient Traffic|剩餘流量不足|
+|`503`|Proxy Connect Error|連接目標網站失敗|
+
