@@ -37,9 +37,9 @@
     {
       "group": "產品介紹",
       "pages": [
-        "essentials/dynamic",
-        "essentials/static",
-        "essentials/star"
+        "product/dynamic",
+        "product/static",
+        "product/start"
       ]
     },
     {
