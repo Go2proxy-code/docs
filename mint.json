@@ -24,6 +24,12 @@
     "name": "免費註冊",
     "url": "http://www.go2proxy.com/register"
   },
+  "tabs": [
+    {
+      "name": "API Reference",
+      "url": "api-reference"
+    }
+  ],
   "navigation": [
     {
       "group": "產品介紹",
@@ -42,6 +48,12 @@
         "essentials/errcode"
       ]
     },
+    {
+      "group": "API Documentation",
+      "pages": [
+        "api-reference/introduction"
+      ]
+    }
   ],
   "footerSocials": {
     "x": "https://x.com/mintlify",
