@@ -5,33 +5,28 @@ icon: 'bug'
 ---
 
 ## 1.動態住宅代理
-| HTTP返回碼   | Response body 內容| 說明    |
+| HTTP狀態碼   | Reason Phrase| 說明    |
 |:-----------  |:-----------------|:---------|
-|`407`         |情況一:Proxy Authentication Failed:%auth<br />情況二:White IP Failed:$client_ip|情況一：用戶名密碼驗證失敗<br />情況二：白名單驗證失敗|
-|`440`         |Bandwidth Over Limit|帶寬超限|
-|`441`|Request Rate Over Limit|HTTP請求/TCP連接超頻|
-|`442`|Authentication Type Error|認證方式檢測失敗|
-|`446`|Host DNS Failed|DNS解析錯誤|
-|`447`|Real-name Authentication Required|需要實名認證|
-|`451`|Miss Host|代理請求格式不正確|
-|`452`|Public Host Required|目標位址不是公網IP|
-|`453`|Proxy Port Error|使用了錯誤的端口號|
-|`456`|CN Client Forbidden|中國大陸客戶端禁止|
-|`459`|Insufficient Traffic|剩餘流量不足|
-|`503`|Proxy Connect Error|連接目標網站失敗|
+|`407` |Proxy Authentication Failed/White IP Failed|用戶名密碼或白名單錯誤|
+|`413` |Illegal Request|請求格式錯誤|
+|`415` |Request Over Limit|並發超限|
+|`416` |Bandwidth Over Limit|帶寬超限|
+|`418` |Miss Host|無法解析目標主機地址|
+|`421` |DNS Resolution Failed|DNS解析失敗|
+|`423` |Public Host Required|目標主機地址非公網ip|
+|`429` |Insufficient Traffic|訂單流量不足|
+|`431` |Unauthorized IP Usage|使用未授權的ip|
+|`503` |Proxy Connect Error|連接目標主機失敗|
 
 ## 2.靜態住宅代理
-| HTTP返回碼   | Response body 內容| 說明    |
+| HTTP狀態碼   | Reason Phrase| 說明    |
 |:----------- |:-----------------|:---------|
-|`407`|情況一:Proxy Authentication Failed:%auth<br />情況二:White IP Failed:$client_ip|情況一：用戶名密碼驗證失敗<br />情況二：白名單驗證失敗|
-|`440`|Bandwidth Over Limit|帶寬超限|
-|`441`|Request Rate Over Limit|HTTP請求/TCP連接超頻|
-|`442`|Authentication Type Error|認證方式檢測失敗|
-|`446`|Host DNS Failed|DNS解析錯誤|
-|`447`|Real-name Authentication Required|需要實名認證|
-|`451`|Miss Host|代理請求格式不正確|
-|`452`|Public Host Required|目標位址不是公網IP|
-|`453`|Proxy Port Error|使用了錯誤的端口號|
-|`456`|CN Client Forbidden|中國大陸客戶端禁止|
-|`461`|Unauthorized IP Usage|無權限使用此IP|
-|`503`|Proxy Connect Error|連接目標網站失敗|
+|`407`|Proxy Authentication Failed/White IP Failed|用戶名密碼或白名單錯誤|
+|`413` |Illegal Request|請求格式錯誤|
+|`415` |Request Over Limit|並發超限|
+|`416` |Bandwidth Over Limit|帶寬超限|
+|`418` |Miss Host|無法解析目標主機地址|
+|`421` |DNS Resolution Failed|DNS解析失敗|
+|`423` |Public Host Required|目標主機地址非公網ip|
+|`431` |Unauthorized IP Usage|使用未授權的ip|
+|`503` |Proxy Connect Error|連接目標主機失敗|
