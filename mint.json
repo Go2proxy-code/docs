@@ -3,6 +3,7 @@
   "logo": {
     "dark": "/logo/dark.png",
     "light": "/logo/light.png"
+    "href": "https://www.go2proxy.com/"
   },
   "favicon": "/logo/tlogo.png",
   "colors": {
@@ -17,12 +18,12 @@
   "topbarLinks": [
     {
       "name": "控制台",
-      "url": "http://www.go2proxy.com/console"
+      "url": "https://www.go2proxy.com/console"
     }
   ],
   "topbarCtaButton": {
     "name": "免費註冊",
-    "url": "http://www.go2proxy.com/register"
+    "url": "https://www.go2proxy.com/register"
   },
   "tabs": [
     {
