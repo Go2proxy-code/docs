@@ -27,14 +27,8 @@
   },
   "tabs": [
     {
-      "name": "API Reference cn",
-      "url": "api-reference",
-       "version": "cn"
-    },
-    {
-      "name": "API Reference en",
-      "url": "api-reference",
-      "version": "en"
+      "name": "API Reference",
+      "url": "api-reference"
     }
   ],
   "navigation": [
