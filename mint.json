@@ -52,9 +52,16 @@
       ]
     },
     {
-      "group": "API Documentation",
+      "group": "API文档",
+      "version": "cn",
       "pages": [
-        "api-reference/introduction",
+        "api-reference/introduction"
+      ]
+    },
+    {
+      "group": "API Documentation",
+      "version": "en",
+      "pages": [
         "api-reference/introductionen"
       ]
     }
