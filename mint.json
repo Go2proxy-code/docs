@@ -15,7 +15,7 @@
       "to": "#15CEEA"
     }
   },
-  "versions": ["中文繁體","English"],
+  "versions": ["English","中文繁體"],
     "topbarLinks": [
     {
       "name": "Console",
