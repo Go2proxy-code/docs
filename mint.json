@@ -15,6 +15,7 @@
       "to": "#15CEEA"
     }
   },
+  "versions": ["cn", "en"],
   "topbarLinks": [
     {
       "name": "控制台",
