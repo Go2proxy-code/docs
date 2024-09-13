@@ -1,0 +1,19 @@
+---
+title: 'Periodic version uses multiple channels'
+version: 'en'
+description: 'Introduction to the settings for using multi-channel in the Dynamic Residential Agent Cycle Edition'
+icon: 'sitemap'
+---
+
+For dynamic residential proxies that need to change IP periodically, multi-channel use is supported. Each channel will forward an independent proxy IP within the same IP change cycle.
+
+- Taking this request`USA - New York area ip、The IP address replacement interval is 1 minute`as an example, set the parameter sid. Each sid corresponds to a channel. The sid is a random string with a length of no more than 6 digits.
+
+```python Code example
+gf2814951572-region-US-area-New York-period-1-sid-ss01:aft415oyt  # Channel one
+gf2814951572-region-US-area-New York-period-1-sid-ss02:aft415oyt  # Channel two
+gf2814951572-region-US-area-New York-period-1-sid-ss03:aft415oyt  # Channel three
+```
+
+<Warning>Only supports setting channels by username</Warning>
+

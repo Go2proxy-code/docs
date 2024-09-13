@@ -43,12 +43,24 @@
     },
     {
       "group": "開發指南",
+      "version": "cn",
       "pages": [
         "dev/ip",
         "dev/session",
         "dev/test",
         "dev/errcode",
         "dev/areacode"
+      ]
+    },
+    {
+      "group": "Developer Guide",
+      "version": "en",
+      "pages": [
+        "dev/ip-en",
+        "dev/session-en",
+        "dev/test-en",
+        "dev/errcode-en",
+        "dev/areacode-en"
       ]
     },
     {

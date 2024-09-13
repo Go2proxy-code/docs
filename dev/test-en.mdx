@@ -1,0 +1,34 @@
+---
+title: 'Test proxy availability'
+version: 'en'
+description: 'It supports two verification methods: whitelist and username and password. It is recommended that you test it on this machine first. After the test is OK, you can use it normally.'
+icon: 'code'
+---
+
+## 1.Proxy verification
+- Whitelist your machine's IP
+- Set the username and password when making a request (according to the request library settings used, the username and password used for proxy verification can be obtained on the order details page)
+
+## 2.Command line test
+If your program runs on Linux, we highly recommend that you test the availability of the proxy server through commands under the command line `curl`before programming.
+
+> For example, your username is `username`, password is `password`, Proxy Host and Proxy Port are `0hmg5j581x.g.go2proxy.com:16888`
+
+You can execute the following command to test the proxy availability：
+
+<CodeGroup>
+
+```python HTTP Proxy
+#Enter the username and password
+curl -v "https://www.google.com/" -x username:password@0hmg5j581x.g.go2proxy.com:16888
+
+#Enter the Proxy-Authorization
+curl -v -H "Proxy-Authorization: Basic bXl1c2VybmFtZTpteXBhc3N3b3Jk" "https://www.google.com/" -x 0hmg5j581x.g.go2proxy.com:16888
+```
+
+```python SOCKS Proxy
+#Enter the username and password
+curl -v "https://www.google.com/" --socks5 username:password@0hmg5j581x.g.go2proxy.com:16888
+```
+
+</CodeGroup>

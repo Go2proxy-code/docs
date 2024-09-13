@@ -1,0 +1,21 @@
+---
+title: 'IP region and IP replacement cycle settings'
+version: 'en'
+description: 'Introduction to the settings of dynamic residential proxy IP region and IP replacement cycle'
+icon: 'gear'
+---
+
+## 1.Management console settings
+You can view and modify the current region and cycle configuration in the console [「My Orders」](https://www.go2proxy.com/console/orders). After the modification is successful, the change will take effect within one minute.
+
+## 2.Encoding settings
+- For example, use an IP in the New York area of the United States and set the IP replacement cycle to 1 minute.
+- You can set it in the program in the following ways：
+`{username}-region-{US}-area-{New York}-period-{1}:{password}`, fill in the user name, country code, area code, IP replacement cycle (minutes), and password. For example, username `gf2814951572`, password`aft415oyt`, used in this request`USA - New York area ip、The IP address replacement interval is 1 minute`。
+
+```python code example
+gf2814951572-region-US-area-New York-period-1:aft415oyt
+```
+
+<Note>When you set the region and cycle through coding, the system will ignore your region and cycle configuration in[「My Orders」](https://www.go2proxy.com/console/orders)in the console.</Note>
+
