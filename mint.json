@@ -35,10 +35,20 @@
   "navigation": [
     {
       "group": "產品介紹",
+      "version": "cn",
       "pages": [
         "product/dynamic",
         "product/static",
         "product/start"
+      ]
+    },
+    {
+      "group": "Product introduction",
+      "version": "en",
+      "pages": [
+        "product/dynamic-en",
+        "product/static-en",
+        "product/start-en"
       ]
     },
     {
