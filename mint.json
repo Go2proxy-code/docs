@@ -27,9 +27,19 @@
   },
   "tabs": [
     {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
+      "name": "API Reference cn",
+      "url": "api-reference",
+       "version": "cn"
+    },
+    {
+      "name": "API Reference en",
+      "url": "api-reference",
+      "version": "en"
+    },
+   {
+    "name": "Migrating from cn to en",
+    "url": "https://mintlify.com/changelog/v2"
+   }
   ],
   "navigation": [
     {
