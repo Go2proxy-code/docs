@@ -15,7 +15,7 @@
       "to": "#15CEEA"
     }
   },
-  "versions": ["cn", "en"],
+  "versions": [ "English","中文(繁体)"],
   "topbarLinks": [
     {
       "name": "控制台",
@@ -35,7 +35,7 @@
   "navigation": [
     {
       "group": "產品介紹",
-      "version": "cn",
+      "version": "中文(繁体)",
       "pages": [
         "product/dynamic",
         "product/static",
@@ -53,7 +53,7 @@
     },
     {
       "group": "開發指南",
-      "version": "cn",
+      "version": "中文(繁体)",
       "pages": [
         "dev/ip",
         "dev/session",
@@ -75,7 +75,7 @@
     },
     {
       "group": "API文档",
-      "version": "cn",
+      "version": "中文(繁体)",
       "pages": [
         "api-reference/introduction"
       ]
