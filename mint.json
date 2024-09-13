@@ -34,21 +34,21 @@
   ],
   "navigation": [
     {
-      "group": "產品介紹",
-      "version": "中文繁體",
-      "pages": [
-        "product/dynamic",
-        "product/static",
-        "product/start"
-      ]
-    },
-    {
       "group": "Product introduction",
       "version": "English",
       "pages": [
         "product/dynamic-en",
         "product/static-en",
         "product/start-en"
+      ]
+    },
+    {
+      "group": "產品介紹",
+      "version": "中文繁體",
+      "pages": [
+        "product/dynamic",
+        "product/static",
+        "product/start"
       ]
     },
     {
