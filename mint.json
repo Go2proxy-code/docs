@@ -35,7 +35,7 @@
   "navigation": [
     {
       "group": "產品介紹",
-      "version": "中文(繁体)",
+      "version": "中文繁體",
       "pages": [
         "product/dynamic",
         "product/static",
@@ -44,7 +44,7 @@
     },
     {
       "group": "Product introduction",
-      "version": "en",
+      "version": "English",
       "pages": [
         "product/dynamic-en",
         "product/static-en",
@@ -53,7 +53,7 @@
     },
     {
       "group": "開發指南",
-      "version": "中文(繁体)",
+      "version": "中文繁體",
       "pages": [
         "dev/ip",
         "dev/session",
@@ -64,7 +64,7 @@
     },
     {
       "group": "Developer Guide",
-      "version": "en",
+      "version": "English",
       "pages": [
         "dev/ip-en",
         "dev/session-en",
@@ -75,14 +75,14 @@
     },
     {
       "group": "API文档",
-      "version": "中文(繁体)",
+      "version": "中文繁體",
       "pages": [
         "api-reference/introduction"
       ]
     },
     {
       "group": "API Documentation",
-      "version": "en",
+      "version": "English",
       "pages": [
         "api-reference/introductionen"
       ]
