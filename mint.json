@@ -16,9 +16,17 @@
     }
   },
   "versions": ["English","中文繁體"],
+    "topbarLinks": [
+    {
+      "name": "control console",
+      "version": "English",
+      "url": "https://www.go2proxy.com/console"
+    }
+  ],
   "topbarLinks": [
     {
       "name": "控制台",
+      "version": "中文繁體",
       "url": "https://www.go2proxy.com/console"
     }
   ],
