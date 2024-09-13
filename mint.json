@@ -52,8 +52,16 @@
     },
     {
       "group": "API Documentation",
+      "version": "v1",
       "pages": [
         "api-reference/introduction"
+      ]
+    },
+    {
+      "group": "API Documentation",
+      "version": "v2",
+      "pages": [
+        "api-reference/introduction.en"
       ]
     }
   ],
