@@ -18,20 +18,12 @@
   "versions": ["English","中文繁體"],
     "topbarLinks": [
     {
-      "name": "control console",
-      "version": "English",
-      "url": "https://www.go2proxy.com/console"
-    }
-  ],
-  "topbarLinks": [
-    {
-      "name": "控制台",
-      "version": "中文繁體",
+      "name": "Console",
       "url": "https://www.go2proxy.com/console"
     }
   ],
   "topbarCtaButton": {
-    "name": "免費註冊",
+    "name": "Free Registration",
     "url": "https://www.go2proxy.com/register"
   },
   "tabs": [
