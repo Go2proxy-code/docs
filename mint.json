@@ -59,8 +59,7 @@
         "dev/session",
         "dev/test",
         "dev/errcode",
-        "dev/areacode",
-        "dev/api-dy"
+        "dev/areacode"
       ]
     },
     {
