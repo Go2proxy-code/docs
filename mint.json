@@ -77,7 +77,8 @@
       "group": "API文档",
       "version": "中文繁體",
       "pages": [
-        "api-reference/introduction"
+        "api-reference/introduction",
+        "api-reference/introduction1"
       ]
     },
     {
