@@ -34,28 +34,6 @@
   ],
   "navigation": [
     {
-    "languages": [
-      {
-        "language": "en",
-        "groups": [
-          {
-            "group": "API Documentation",
-            "pages": ["api-reference/introductionen", "api-reference/introduction1-en"]
-          }
-        ]
-      },
-      {
-        "language": "cn",
-        "groups": [
-          {
-            "group": "API文档",
-            "pages": ["api-reference/introduction", "api-reference/introduction1"]
-          }
-        ]
-      }
-    ]
-  },
-    {
       "group": "Product introduction",
       "version": "English",
       "pages": [
