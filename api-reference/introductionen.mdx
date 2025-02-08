@@ -16,16 +16,16 @@ description: 'Introduction to the Acquire Proxy API Interface。'
 
 | Parameter Name       | required | Type       | Description            |
 | :-------- | :- | :------- | :------------- |
-| app_id   | required  | `string` | API存取憑證        |
-| signature | required  | `string` | API存取憑證        |
-| orderid   | required  | `string` | 訂單號            |
-| num       | required  | `int`    | 本次提取IP數量（1-1000）    |
-| period    | required  | `int`    | IP有效時間（1-30）      |
-| region    | required  | `string` | 國家編碼，不填為`全球混播` |
+| app_id   | required  | `string` | API Access Credentials        |
+| signature | required  | `string` | API Access Credentials        |
+| orderid   | required  | `string` | Order Number            |
+| num       | required  | `int`    | Number of proxy to Extract This Time（1-1000）    |
+| period    | required  | `int`    | Proxy Validity Period（1-30）      |
+| region    | optional  | `string` | Country Code (Leave Blank for `Global Mixed Broadcasting`) |
 
-## 2.回傳範例
+## 2.Return Example
 
-```python 程式碼範例
+```python code example
 {
     "code": 0,
     "msg": "success",
@@ -45,10 +45,10 @@ description: 'Introduction to the Acquire Proxy API Interface。'
 }
 ```
 
-## 3.回傳參數說明
+## 3.Return Parameter Description
 
-| 參數名  | 類型          | 說明                           |
+| Parameter Name  | Type   | Description                       |
 | :--- | :---------- | :--------------------------- |
-| code | `int`       | 請求業務狀態，0為成功，非0均為業務失敗，錯誤碼詳情參下 |
-| msg  | `string`    | 請求業務描述請求業務描述                 |
-| data | `"" or map` | 請求業務失敗時為`空字串`                |
+| code | `int`       | Request Business Status, A value of 0 signifies success; any value other than 0 indicates a business failure.|
+| msg  | `string`    | Request Business Description                 |
+| data | `"" or map` | Empty string if the request business fails               |
