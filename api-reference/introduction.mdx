@@ -1,7 +1,7 @@
 ---
-title: 'API介面'
+title: '動態住宅代理'
 version: '中文繁體'
-description: 'API介面介紹。'
+description: '動態住宅代理API介面介紹。'
 ---
 
 <Note>透過動態代理API提取出的IP，僅能使用白名單認證。</Note>
@@ -19,8 +19,8 @@ description: 'API介面介紹。'
 | app\_id   | 是  | `string` | API存取憑證        |
 | signature | 是  | `string` | API存取憑證        |
 | orderid   | 是  | `string` | 訂單號            |
-| num       | 是  | `int`    | 本次提取IP數量       |
-| period    | 是  | `int`    | IP有效時間         |
+| num       | 是  | `int`    | 本次提取IP數量（1-1000）    |
+| period    | 是  | `int`    | IP有效時間（1-30）      |
 | region    | 是  | `string` | 國家編碼，不填為`全球混播` |
 
 ## 2.回傳範例
