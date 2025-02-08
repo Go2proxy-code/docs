@@ -14,8 +14,8 @@ description: 'Introduction to the Acquire ISP Proxy API Interface'
 
 | Parameter  | required | Type       | Description            |
 | :------------------- | :- | :------- | :------------------------------------------------- |
-| app_id   | required  | `string` | API Access Credentials        |
-| signature | required  | `string` | API Access Credentials        |
+| app_id   | required  | `string` | API Access Credentials: AppID        |
+| signature | required  | `string` | API Access Credentials: AppSecret       |
 | orderid   | required  | `string` | Order Number            |
 | ft        | optional  | `string` | Return Format, default is json <br />Options:json,text,xml |
 | delimiter | optional  | `string` | Delimiter, required when ft=text <br />Options:\r\n,\n,space,\|<br />or custom "custom_t" where t is a custom value|
