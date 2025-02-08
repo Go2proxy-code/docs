@@ -1,5 +1,48 @@
 ---
-title: 'API interface'
+title: 'API介面'
 version: 'English'
-description: 'The API interface is under development, so stay tuned.'
+description: 'API介面介紹。'
 ---
+
+<Note>透過動態代理API提取出的IP，僅能使用白名單認證。</Note>
+
+- API介面位址：https://api.go2proxy.com/v1/dynamic/proxies
+- 請求方式：GET
+- QPS限制：單訂單1秒訪問1次。
+
+## 1.參數
+| 參數名| 必填| 類型   | 說明   |
+|:-----------  |:-----------------|:---------|:---------|
+|app_id |是|`string`|API存取憑證|
+|signature |是|`string`|API存取憑證|
+|orderid|是|`string`|訂單號|
+|num |是|`int`|本次提取IP數量，*1 <= *`*num*` <= 1000|
+|period|是|`int`|IP有效時間，*1 <= *`*period*` <= 30|
+|region|是|`string`|國家編碼，不填為`全球混播`|
+
+## 2.回傳範例
+```json 
+{
+    "code": 0,
+    "msg": "success",
+    "data": {
+        "count": 2,
+        "proxy_list": [
+            {
+                "ip": "43.130.57.106",
+                "port": 10001
+            },
+            {
+                "ip": "43.130.57.106",
+                "port": 10002
+            }
+        ]
+    }
+}
+```
+## 3.回傳參數說明
+| 參數名| 類型  | 說明   |
+|:-----------  |:-----------------|:---------|
+|code |`int`|請求業務狀態，0為成功，非0均為業務失敗，錯誤碼詳情參下|
+|msg |`string`|請求業務描述請求業務描述|
+|data|`"" or map`|請求業務失敗時為`空字串`|
