@@ -85,7 +85,8 @@
       "group": "API Documentation",
       "version": "English",
       "pages": [
-        "api-reference/introductionen"
+        "api-reference/introductionen",
+        "api-reference/introduction1-en"
       ]
     }
   ],
