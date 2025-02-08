@@ -29,7 +29,10 @@
   "tabs": [
     {
       "name": "API Reference",
-      "url": "api-reference"
+        "pages": [
+        "api-reference/introduction",
+        "api-reference/introductionen"
+      ]
     }
   ],
   "navigation": [
