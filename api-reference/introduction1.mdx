@@ -12,70 +12,70 @@ description: '靜態代理IP提取API介面介紹。'
 
 ## 1.參數
 
-| 參數名       | 必填 | 類型       | 說明             |
-| :-------- | :- | :------- | :------------- |
-| app_id   | 是  | `string` | API存取憑證        |
-| signature | 是  | `string` | API存取憑證        |
-| orderid   | 是  | `string` | 訂單號            |
-| ft       | 否  | `string`    | 返回格式，預設為json <br />可選項（json,text,xml）    |
-| delimiter    | 否  | `string`    | 分隔符，當ft=text時必填<br />可選項（\r\n,\n,space,|） <br />或自訂義"custom_t" t為自訂義值      |
-| display    | 否  | `string` | 返回結果，預設返回ip:port<br /> display=ip_port_user_pass時返回ip、port、使用者名稱、密碼<br />display=ip_port_user_pass_loc時返回ip、port、使用者名稱、密碼、地區|
-
+| 參數名       | 必填 | 類型       | 說明                          |                   
+| :-------- | :- | :------- | :------------------------------------------------------------| 
+| app\_id   | 是  | `string` | API存取憑證|
+| signature | 是  | `string` | API存取憑證|
+| orderid   | 是  | `string` | 訂單號 |
+| ft        | 否  | `string` | 返回格式，預設為json <br />可選項：json,text,xml |
+| delimiter | 否  | `string` | 分隔符，當ft=text時必填<br />可選項：\r\n,\n,space,| <br />或自訂義"custom\_t" t為自訂義值 |
+| display   | 否  | `string` | 返回結果，預設返回ip:port<br /> display=ip\_port\_user\_pass時返回ip、port、使用者名稱、密碼<br />display=ip\_port\_user\_pass\_loc時返回ip、port、使用者名稱、密碼、地區 |
 
 ## 2.回傳參數說明
 
 | 參數名  | 類型          | 說明                           |
 | :--- | :---------- | :--------------------------- |
 | code | `int`       | 請求業務狀態，0為成功，非0均為業務失敗，錯誤碼詳情參下 |
-| msg  | `string`    | 請求業務描述              |
+| msg  | `string`    | 請求業務描述                       |
 | data | `"" or map` | 請求業務失敗時為`空字串`                |
 
 ## 3.響應說明
-ft取值
+
+ft取值及对应返回示例
+
 <CodeGroup>
+  ```python text
+  #响应头为:content_type: text/plain;charset=UTF-8
+  38.182.98.234:32791:3A9WA38132791:SrFhopr9aYpK 154.64.154.151:30003:3A6415420003:PMSvru7IkFMy
 
-```python text
-#响应头为:content_type: text/plain;charset=UTF-8
-38.182.98.234:32791:3A9WA38132791:SrFhopr9aYpK 154.64.154.151:30003:3A6415420003:PMSvru7IkFMy
+  ```
 
-```
+  ```python json
+  #响应头为:Content-type: text/plain; charset=UTF-8
+  {
+    "code": 0,
+    "msg": "Success",
+    "data": [
+      {
+        "ip": "38.182.98.204",
+        "port": "32791",
+        "username": "3A9WA3818298204A32791",
+        "password": "SrFhopr9aYpK"
+      }
+    ]
+  }
+  ```
 
-```python json
-#响应头为:Content-type: text/plain; charset=UTF-8
-{
-  "code": 0,
-  "msg": "Success",
-  "data": [
-    {
-      "ip": "38.182.98.204",
-      "port": "32791",
-      "username": "3A9WA3818298204A32791",
-      "password": "SrFhopr9aYpK"
-    }
-  ]
-}
-```
-```python xml
-#响应头为:Content-type: application/xml; charset=UTF-8
-<response>
-<code>0</code>
-<msg>success</msg>
-<data>
-<proxy>
-<ip>38.182.98.204</ip>
-<port>32791</port>
-<username>3A9WA3818298204A32791</username>
-<password>SrFhopr9aYpK</password>
-</proxy>
-<proxy>
-<ip>154.64.154.251</ip>
-<port>30003</port>
-<username>3A9XA15464154251A30003</username>
-<password>PMSvru7IkFMy</password>
-</proxy>
-</data>
-</response>
+  ```python xml
+  #响应头为:Content-type: application/xml; charset=UTF-8
+  <response>
+  <code>0</code>
+  <msg>success</msg>
+  <data>
+  <proxy>
+  <ip>38.182.98.204</ip>
+  <port>32791</port>
+  <username>3A9WA3818298204A32791</username>
+  <password>SrFhopr9aYpK</password>
+  </proxy>
+  <proxy>
+  <ip>154.64.154.251</ip>
+  <port>30003</port>
+  <username>3A9XA15464154251A30003</username>
+  <password>PMSvru7IkFMy</password>
+  </proxy>
+  </data>
+  </response>
 
-```
-
+  ```
 </CodeGroup>
