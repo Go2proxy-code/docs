@@ -4,9 +4,7 @@ version: 'English'
 description: 'Introduction to the Acquire ISP Proxy API Interface。'
 ---
 
-<Note>The proxies extracted from the dynamic proxy API can only be used with whitelist authentication.</Note>
-
-* API interface address：https://api.go2proxy.com/v1/dynamic/proxies
+* API interface address：https://api.go2proxy.com/v1/static/proxies
 
 * Request Method：GET
 
@@ -19,36 +17,65 @@ description: 'Introduction to the Acquire ISP Proxy API Interface。'
 | app_id   | required  | `string` | API Access Credentials        |
 | signature | required  | `string` | API Access Credentials        |
 | orderid   | required  | `string` | Order Number            |
-| num       | required  | `int`    | Number of proxy to Extract This Time（1-1000）    |
-| period    | required  | `int`    | Proxy Validity Period（1-30）      |
-| region    | optional  | `string` | Country Code (Leave Blank for `Global Mixed Broadcasting`) |
+| ft        | optional  | `string` | Return Format, default is json <br />Options:json,text,xml |
+| delimiter | optional  | `string` | Delimiter, required when ft=text <br />Options:\r\n,\n,space,\|<br />or custom "custom_t" where t is a custom value|
+| display   | optional  | `string` | Return Result: By default, returns proxy:port<br /> When display=ip\_port\_user\_pass,it returns proxy,port,username,and password<br /> When display=ip\_port\_user\_pass\_loc,it returns proxy,port,username,password,and region|
 
-## 2.Return Example
-
-```python code example
-{
-    "code": 0,
-    "msg": "success",
-    "data": {
-        "count": 2,
-        "proxy_list": [
-            {
-                "ip": "43.130.57.106",
-                "port": 10001
-            },
-            {
-                "ip": "43.130.57.106",
-                "port": 10002
-            }
-        ]
-    }
-}
-```
-
-## 3.Return Parameter Description
+## 2.Return Parameter Description
 
 | Parameter Name    | Type            | Description                             |
 | :------------------ | :------------------ | :----------------------------------------- |
 | code   | `int`         | Request Business Status<br />A value of 0 signifies success <br />any value other than 0 indicates a business failure|
 | msg    | `string`      | Request Business Description                 |
 | data   | `"" or map`   | Empty string if the request business fails               |
+
+## 3.Response description
+
+ft values and corresponding return examples
+
+<CodeGroup>
+  ```python text
+  #Response Header:Content-type:text/plain;charset=UTF-8
+  38.182.98.234:32791:3A9WA38132791:SrFhopr9aYpK 154.64.154.151:30003:3A6415420003:PMSvru7IkFMy
+
+  ```
+
+  ```python json
+  #Response Header:Content-type: application/json
+  {
+    "code": 0,
+    "msg": "Success",
+    "data": [
+      {
+        "ip": "38.182.98.204",
+        "port": "32791",
+        "username": "3A9WA3818298204A32791",
+        "password": "SrFhopr9aYpK"
+      }
+    ]
+  }
+  ```
+
+  ```python xml
+  #Response Header:Content-type: application/xml; charset=UTF-8
+  <response>
+  <code>0</code>
+  <msg>success</msg>
+  <data>
+  <proxy>
+  <ip>38.182.98.204</ip>
+  <port>32791</port>
+  <username>3A9WA3818298204A32791</username>
+  <password>SrFhopr9aYpK</password>
+  </proxy>
+  <proxy>
+  <ip>154.64.154.251</ip>
+  <port>30003</port>
+  <username>3A9XA15464154251A30003</username>
+  <password>PMSvru7IkFMy</password>
+  </proxy>
+  </data>
+  </response>
+
+  ```
+</CodeGroup>
