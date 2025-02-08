@@ -26,6 +26,12 @@
     "name": "Free Registration",
     "url": "https://www.go2proxy.com/register"
   },
+  "tabs": [
+    {
+      "name": "API Reference",
+      "url": "api-reference"
+    }
+  ],
   "navigation": [
     {
       "group": "Product introduction",
